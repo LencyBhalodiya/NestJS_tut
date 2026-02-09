@@ -8,7 +8,7 @@ import configuration from './config/configuration';
 @Module({
   imports: [
     ConfigModule.forRoot({
-      load : [configuration],
+      load: [configuration],
       envFilePath: getEnvFilePath(),
     }),
   ],
@@ -18,6 +18,7 @@ import configuration from './config/configuration';
 export class AppModule {}
 
 function getEnvFilePath() {
-  console.log(`NODE_ENV: ${process.env.NODE_ENV}`);
-  return process.env.NODE_ENV?.trim() == 'development' ? '.env.dev' : '.env.production';
+  return process.env.NODE_ENV?.trim() == 'development'
+    ? '.env.development'
+    : '.env.production';
 }

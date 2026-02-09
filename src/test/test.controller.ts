@@ -2,8 +2,8 @@ import { Controller, Get } from '@nestjs/common';
 
 @Controller('test')
 export class TestController {
-    @Get()
-    getHello(): string {
-        return 'test route successfully';
-    }
+  @Get()
+  getHello(): string {
+    return 'test route successfully';
+  }
 }
